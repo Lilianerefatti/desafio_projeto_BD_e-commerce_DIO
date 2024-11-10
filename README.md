@@ -17,8 +17,7 @@ Relacionamentos Principais entre as Entidades:
 •	Pedido e Pagamento: Um pedido pode ter um ou mais pagamentos associados a ele, especialmente quando há múltiplas formas de pagamento. Relacionamento: 1:N (Pedido → Pagamento).
 •	Pedido e Entrega: Cada pedido possui um único envio, mas o status de entrega pode ser monitorado independentemente. Relacionamento: 1:1 (Pedido → Entrega).
 •	Produto e Estoque: Cada produto tem um estoque relacionado, que controla a quantidade disponível para venda. Relacionamento: 1:N (Produto → Estoque).
-•	Produto e Fornecedor: Um fornecedor pode fornecer vários produtos, mas cada produto vem de um único fornecedor. Relacionamento: N:M (Fornecedor → Produto).
-- Produto e Categoria: Um produto pode ser categorizado em uma ou mais categorias. Relacionamento: N:M (Produto → CategoriaProduto) através de uma tabela intermediária (ProdutoCategoria).
+•	Produto e Fornecedor: Um fornecedor pode fornecer vários produtos, mas cada produto vem de um único fornecedor. Relacionamento: N:M (Fornecedor → Produto). Produto e Categoria: Um produto pode ser categorizado em uma ou mais categorias. Relacionamento: N:M (Produto → CategoriaProduto) através de uma tabela intermediária (ProdutoCategoria).
 
 Objetivos do Modelo Conceitual: 
 Facilitar a navegação e as consultas: O modelo deve ser projetado para facilitar consultas rápidas, como a busca por produtos, o status de um pedido, o acompanhamento de entregas, etc. Manter a integridade referencial: As relações entre as tabelas devem ser bem definidas, garantindo que os dados estejam consistentes e que não haja registros órfãos (por exemplo, um pedido sem um cliente). Suporte ao crescimento: O modelo deve ser escalável, permitindo o aumento da quantidade de produtos, clientes e transações sem comprometer a performance. Segurança e confiabilidade: O banco de dados deve garantir que dados sensíveis, como informações de pagamento, estejam protegidos e não sejam corrompidos.
